@@ -1,12 +1,15 @@
 body {
   background-color: #92BCEA;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
+
 
 .navLink li {
     margin: 20px;
 }
 
- a {
+a {
   color: black;
 }
 
@@ -17,7 +20,7 @@ body {
 .form-inline {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
+  align-items: center; /* I changed this from center*/
 }
 
 /* Add some margins for each label */
@@ -26,7 +29,8 @@ body {
 }
 
 /* Style the input fields */
-.form-inline textbox input[type=text], input[type=number], input[type=date],  {
+.form-inline textbox input[type=text], input[type=number], input[type=date] 
+{
   vertical-align: middle;
   margin: 5px 10px 5px 0;
   padding: 10px;
@@ -54,7 +58,8 @@ body {
 .event-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around; 
 }
 
 .event {
@@ -72,8 +77,12 @@ body {
   margin:3px;
 }
 
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16pt;
+}
 h2 {
-  color: lightgrey;
+  color: white;
 }
 
 h3, h4, h5 {

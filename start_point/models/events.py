@@ -7,6 +7,6 @@ event3 = Event("two days from now", "Quiz Night", 40,  False, 'Open Area', "Quiz
 events = [event1, event2, event3]
 
 
-def add_new_event(event):
+def add_new_event(event): # this saves the new event from input form to the events list
     events.append(event)
 
