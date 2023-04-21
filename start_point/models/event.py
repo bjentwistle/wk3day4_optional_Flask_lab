@@ -4,6 +4,6 @@ class Event():
         self.date = date
         self.name = name
         self.guests = guests
-        self.recurring = recurring
+        self.recurring = recurring 
         self.room_location = room_location
         self.description = description

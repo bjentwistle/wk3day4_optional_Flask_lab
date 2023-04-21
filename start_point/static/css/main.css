@@ -58,8 +58,7 @@ a {
 .event-container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around; 
+  justify-content: space-between; 
 }
 
 .event {
@@ -69,6 +68,7 @@ a {
   background-color: #617073;
   padding: 10px;
   margin:20px;
+  border: 20px;
 }
 
 .event p, i{

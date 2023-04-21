@@ -15,16 +15,16 @@
         -->
 
     <label class = label for="title">Date</label>
-    <input type="text" name="date" id="date">
+    <input type="date" name="date" id="date">
 
     <label class = label for="title">Event name</label>
     <input type="text" name="name" id="name">
 
     <label class = label for="title">No. of guests</label>
-    <input type="int" name="guests" id="guests">
+    <input type="number" name="guests" id="guests">
 
     <label class = label for="title">Recurring</label>
-    <input type="boolean" name="recurring" id="recurring">
+    <input type="checkbox" name="recurring" id="recurring">
 
     <label class = label for="title">Location</label>
     <input type="text" name="room_location" id="room_location">
@@ -37,18 +37,26 @@
     </a>
 
     <h1>Upcoming Events!</h1>
+    <div class = "event-container">
     {% for event in events %} 
+    
     <div class="event">
     <h2>{{ event.name }}</h2>
     <h3>{{ event.description }}</h3>
     <h5>Guests: {{ event.guests }}</h5>
     <h5>Room: {{ event.room_location }}</h5>
+    <h5> Date: {{event.date}}</h5>
 
         {% if event.recurring %}
         <p><i>Recurring </i></p>
         {% endif %}
 
+    <form class = 'form-inline' action='/events/delete/{{event.name}}' method= 'post'>
+        <input type = 'submit' value = 'Delete Event'>
+    </form>
+
     </div>
+    
     {% endfor %}
 
     </div>
